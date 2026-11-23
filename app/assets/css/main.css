@@ -1,1 +1,29 @@
+@import 'variables.css';
 @import 'tailwind.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-rubik), ui-sans-serif, system-ui, sans-serif;
+  min-height: 100vh;
+  color: var(--color-main-text);
+  background: var(--color-main-bg);
+  font-synthesis: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
