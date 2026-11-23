@@ -1,8 +1,17 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import Header from '~/components/layout/Header.vue'
+</script>
 
 <template>
-  <div class="w-full h-screen flex items-center justify-center gap-2">
-    <h1 class="text-4xl font-bold">Home</h1>
-    <Icon aria-hidden="true" name="lucide:search" size="30" />
-  </div>
+  <Header class=""></Header>
+
+  <div class="w-full mx-auto max-w-max-width-container"></div>
 </template>
+
+<style scoped>
+.header :deep(.blur-circle) {
+  @media screen and (max-width: 1024px) {
+    background: none;
+  }
+}
+</style>
