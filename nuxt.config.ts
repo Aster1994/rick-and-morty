@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: import.meta.dev,
   },
-  modules: ['@nuxt/eslint', '@nuxt/image'],
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/icon'],
   css: ['~/assets/css/main.css'],
   typescript: {
     strict: true,
@@ -23,6 +23,12 @@ export default defineNuxtConfig({
   image: {
     domains: [env.NUXT_PUBLIC_IMAGE_DOMAIN],
     format: ['webp'],
+  },
+
+  icon: {
+    serverBundle: {
+      collections: ['lucide'],
+    },
   },
 
   app: {
