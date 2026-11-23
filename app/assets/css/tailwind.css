@@ -1,22 +1,21 @@
 @import 'tailwindcss';
 
 @theme {
-  /*colors*/
-  color-scheme: dark;
-  --color-primary: var(--color-primary);
-  --color-secondary: var(--color-secondary);
-  --color-dead: var(--color-dead);
-  --color-alive: var(--color-alive);
+    /*colors*/
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+    --color-dead: var(--color-dead);
+    --color-alive: var(--color-alive);
 
-  --color-main-text: var(--color-main-text);
-  --color-main-bg: var(--color-main-bg);
+    --color-main-text: var(--color-main-text);
+    --color-main-bg: var(--color-main-bg);
 
-  --color-card: var(--color-card);
-  --color-muted-text: var(--color-muted-text);
-  --color-soft-text: var(--color-soft-text);
-  --color-deep-teal: var(--color-deep-teal);
-  --color-surface: var(--color-surface);
+    --color-card: var(--color-card);
+    --color-muted-text: var(--color-muted-text);
+    --color-soft-text: var(--color-soft-text);
+    --color-deep-teal: var(--color-deep-teal);
+    --color-surface: var(--color-surface);
 
-  /*fonts*/
-  --font-rubik: var(--font-rubik);
+    /*fonts*/
+    --font-rubik: var(--font-rubik);
 }
