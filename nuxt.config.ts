@@ -7,17 +7,24 @@ export default defineNuxtConfig({
   devtools: {
     enabled: import.meta.dev,
   },
-  modules: ['@nuxt/eslint'],
+  modules: ['@nuxt/eslint', '@nuxt/image'],
   css: ['~/assets/css/main.css'],
   typescript: {
     strict: true,
   },
+
   runtimeConfig: {
     public: {
       apiBaseUrl: env.NUXT_PUBLIC_API_BASE_URL,
       siteUrl: env.NUXT_PUBLIC_SITE_URL,
     },
   },
+
+  image: {
+    domains: [env.NUXT_PUBLIC_IMAGE_DOMAIN],
+    format: ['webp'],
+  },
+
   app: {
     head: {
       htmlAttrs: { lang: 'en' },

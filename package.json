@@ -15,6 +15,7 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@nuxt/image": "^1.11.2",
     "nuxt": "^4.6.4",
     "vue": "^3.5.25",
     "zod": "^4.6.7"
