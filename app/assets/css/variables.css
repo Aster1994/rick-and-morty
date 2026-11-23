@@ -14,7 +14,11 @@
   --color-soft-text: #e5e6e6;
   --color-deep-teal: #00333d;
   --color-surface: #3b3d3f;
+  --color-dark-bg: #0e0e0e;
 
   /*fonts*/
   --font-rubik: 'Rubik';
+
+  /*spaces*/
+  --max-width-container: 1640px;
 }

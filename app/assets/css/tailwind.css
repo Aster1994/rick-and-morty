@@ -15,7 +15,11 @@
   --color-soft-text: var(--color-soft-text);
   --color-deep-teal: var(--color-deep-teal);
   --color-surface: var(--color-surface);
+  --color-dark-bg: var(--color-dark-bg);
 
   /*fonts*/
   --font-rubik: var(--font-rubik);
+
+  /*spaces*/
+  --container-max-width-container: var(--max-width-container);
 }
