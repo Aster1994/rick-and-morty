@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: import.meta.dev,
   },
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/icon'],
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/icon', '@nuxt/fonts'],
   css: ['~/assets/css/main.css'],
   typescript: {
     strict: true,
@@ -29,6 +29,19 @@ export default defineNuxtConfig({
     serverBundle: {
       collections: ['lucide'],
     },
+  },
+
+  fonts: {
+    provider: 'local',
+    families: [
+      {
+        name: 'Rubik',
+        src: '/assets/fonts/Rubik/rubik-v31-latin-regular.woff2',
+        weight: 400,
+        style: 'normal',
+        preload: true,
+      },
+    ],
   },
 
   app: {
