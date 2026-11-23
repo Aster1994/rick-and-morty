@@ -54,7 +54,7 @@ function onClear() {
       :value="modelValue"
       class="h-full w-full bg-transparent text-sm leading-6 outline-none disabled:cursor-not-allowed"
       @input="onInput"
-    >
+    />
 
     <button
       v-if="clearable && modelValue"
