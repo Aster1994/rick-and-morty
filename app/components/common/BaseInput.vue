@@ -8,6 +8,7 @@ interface Props {
   id?: string
   name?: string
   prependIcon?: string
+  maxlength?: number | undefined
 }
 
 withDefaults(defineProps<Props>(), {
@@ -19,6 +20,7 @@ withDefaults(defineProps<Props>(), {
   id: undefined,
   name: undefined,
   prependIcon: '',
+  maxlength: undefined,
 })
 
 const emit = defineEmits<{
@@ -48,6 +50,7 @@ function onClear() {
       :id="id"
       :disabled="disabled"
       :inputmode="type === 'number' ? 'numeric' : 'text'"
+      :maxlength="maxlength"
       :name="name"
       :placeholder="placeholder"
       :type="type"
@@ -55,7 +58,6 @@ function onClear() {
       class="h-full w-full bg-transparent text-sm leading-6 outline-none disabled:cursor-not-allowed"
       @input="onInput"
     />
-
     <button
       v-if="clearable && modelValue"
       aria-label="clear Text"
