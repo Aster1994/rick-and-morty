@@ -3,7 +3,9 @@ import Header from '~/components/layout/Header.vue'
 </script>
 
 <template>
-  <Header class=""></Header>
+  <Header>
+    <CharacterSearch />
+  </Header>
 
   <div class="w-full mx-auto max-w-max-width-container"></div>
 </template>
