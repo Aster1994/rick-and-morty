@@ -21,7 +21,6 @@ export default defineNuxtConfig({
   },
 
   image: {
-    domains: [env.NUXT_PUBLIC_IMAGE_DOMAIN],
     format: ['webp'],
   },
 
