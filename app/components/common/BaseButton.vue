@@ -52,7 +52,9 @@ defineEmits<{ click: [event: MouseEvent] }>()
       size="16"
     />
     <Icon v-else-if="appendIcon" :name="appendIcon" aria-hidden="true" size="20" />
-    <span v-if="$slots.default" class="font-medium"><slot /></span>
+    <span v-if="$slots.default" class="font-medium flex items-center justify-center gap-2">
+      <slot />
+    </span>
     <Icon v-if="prependIcon && !loading" :name="prependIcon" aria-hidden="true" size="20" />
   </button>
 </template>
