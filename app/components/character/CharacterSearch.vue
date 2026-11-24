@@ -1,13 +1,14 @@
 <script lang="ts" setup>
 import BaseInput from '~/components/common/BaseInput.vue'
 import BaseButton from '~/components/common/BaseButton.vue'
+import { trimText } from '~/utils/formatText.ts'
 
 withDefaults(
   defineProps<{
-    isLoading?: boolean
+    pending?: boolean
   }>(),
   {
-    isLoading: false,
+    pending: false,
   },
 )
 const route = useRoute()
@@ -21,13 +22,16 @@ watch(
 )
 
 async function submitSearch() {
-  const name = searchInput.value.trim().slice(0, 20)
-  await navigateTo({ path: '/', query: name ? { name } : {} })
+  const name = trimText(searchInput.value, 20)
+  await navigateTo({
+    path: '/characters',
+    query: name ? { name } : {},
+  })
 }
 
 async function clearSearch() {
   searchInput.value = ''
-  await navigateTo('/')
+  await navigateTo('/characters')
 }
 </script>
 
@@ -45,7 +49,8 @@ async function clearSearch() {
       placeholder="Search for characters..."
       @clear="clearSearch"
     />
-    <BaseButton :loading="isLoading" append-icon="lucide:search" type="submit">
+    <BaseButton :loading="pending" type="submit">
+      <Icon name="lucide:search" size="20" />
       <span class="hidden lg:inline"> Search</span>
     </BaseButton>
   </form>
