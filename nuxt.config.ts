@@ -25,6 +25,12 @@ export default defineNuxtConfig({
   },
 
   icon: {
+    customCollections: [
+      {
+        prefix: 'fig',
+        dir: './app/assets/icons',
+      },
+    ],
     serverBundle: {
       collections: ['lucide'],
     },

@@ -50,7 +50,7 @@ async function clearSearch() {
       @clear="clearSearch"
     />
     <BaseButton :loading="pending" type="submit">
-      <Icon name="lucide:search" size="20" />
+      <Icon name="fig:search-normal" size="20" />
       <span class="hidden lg:inline"> Search</span>
     </BaseButton>
   </form>
