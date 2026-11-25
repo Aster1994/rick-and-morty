@@ -8,6 +8,17 @@ the [Rick and Morty API](https://rickandmortyapi.com/documentation).
 - Node.js `24.22.1`
 - Corepack-enabled pnpm `12.21.0`
 
+## Stack
+
+- Nuxt 4.6.4 / Vue 3
+- TypeScript (strict mode)
+- Tailwind CSS 4 through `@tailwindcss/vite`
+- `@nuxt/icon` (Lucide icon collection)
+- `@nuxt/image`
+- pnpm
+- ESLint + Prettier
+- Netlify (Nitro SSR) and Docker
+
 ## Getting started
 
 Make sure to install dependencies:
@@ -47,7 +58,6 @@ Open `http://localhost:3000`.
 ```env
 NUXT_PUBLIC_APP_ENV=production
 NUXT_PUBLIC_API_BASE_URL=https://rickandmortyapi.com/api
-NUXT_PUBLIC_IMAGE_DOMAIN=rickandmortyapi.com
 ```
 
 No API key is required.

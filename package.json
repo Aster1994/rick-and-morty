@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.11.0",
+    "@nuxtjs/seo": "^6.1.0",
     "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^26.6.6",
     "dotenv": "^17.4.2",

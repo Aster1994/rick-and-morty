@@ -4,8 +4,10 @@ import Logo from '~/components/common/logo.vue'
 
 <template>
   <header class="header isolate">
-    <div class="header__content blur-circle mx-auto max-w-max-width-container">
-      <Logo class="py-3 px-4" />
+    <div
+      class="header__content blur-circle px-4 pt-3 pb-6 mx-auto max-w-max-width-container flex flex-col gap-6"
+    >
+      <Logo />
 
       <slot />
     </div>
@@ -18,9 +20,9 @@ import Logo from '~/components/common/logo.vue'
 
   .blur-circle {
     background: radial-gradient(
-      circle 140px at 20% 50%,
+      circle 140px at 15% 50%,
       color-mix(in srgb, var(--color-primary) 45%, transparent),
-      transparent 100%
+      transparent 120%
     );
 
     @media screen and (max-width: 1024px) {
