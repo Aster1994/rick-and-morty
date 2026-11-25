@@ -80,6 +80,13 @@ watch(error, async (currentError) => {
     await navigateTo({ path: '/characters', query }, { replace: true })
   }
 })
+
+useSeoMeta({
+  title: 'Rick & Morty Characters',
+  description: 'Search and explore characters from the Rick and Morty universe.',
+  ogTitle: 'Rick & Morty Characters',
+  ogDescription: 'Search and explore characters from the Rick and Morty universe.',
+})
 </script>
 
 <template>

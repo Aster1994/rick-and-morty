@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite'
 import env from './app/lib/env.ts'
 
@@ -7,8 +6,10 @@ export default defineNuxtConfig({
   devtools: {
     enabled: import.meta.dev,
   },
+
   modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/icon', '@nuxt/fonts'],
   css: ['~/assets/css/main.css'],
+
   typescript: {
     strict: true,
   },
@@ -16,8 +17,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBaseUrl: env.NUXT_PUBLIC_API_BASE_URL,
-      siteUrl: env.NUXT_PUBLIC_SITE_URL,
     },
+  },
+
+  robots: {
+    disallow: env.NUXT_PUBLIC_APP_ENV === 'production' ? [] : ['/'],
   },
 
   image: {
@@ -49,20 +53,18 @@ export default defineNuxtConfig({
     ],
   },
 
-  app: {
-    head: {
-      htmlAttrs: { lang: 'en' },
-      title: 'Rick & Morty',
-      titleTemplate: '%s · Rick & Morty',
-      meta: [
-        {
-          name: 'description',
-          content: 'Explore characters, episodes, and locations from the Rick and Morty universe.',
-        },
-      ],
-    },
+  site: {
+    name: 'Rick & Morty Explorer',
   },
 
+  seo: {
+    meta: {
+      title: 'Rick & Morty',
+      description: 'Explore characters, episodes, and locations from the Rick and Morty universe.',
+      robots: env.NUXT_PUBLIC_APP_ENV === 'production' ? 'index, follow' : 'noindex, nofollow',
+      themeColor: [{ content: '#B2DF28', media: '(prefers-color-scheme: dark)' }],
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },

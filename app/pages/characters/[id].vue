@@ -41,6 +41,22 @@ const { data: location, error: locationError } = await useAsyncData<Location | n
     return await $api<Location>(`/location/${locationId}`)
   },
 )
+
+useSeoMeta({
+  title: () => (character.value ? `${character.value.name} | Character` : 'Character Details'),
+  description: () =>
+    character.value
+      ? `Explore ${character.value.name}, a ${character.value.status.toLowerCase()} ${character.value.species} from Rick and Morty.`
+      : 'Explore a Rick and Morty character.',
+  ogTitle: () => character.value?.name,
+  ogDescription: () =>
+    character.value
+      ? `Explore ${character.value.name}, a ${character.value.status.toLowerCase()} ${character.value.species} from Rick and Morty.`
+      : 'Explore a Rick and Morty character.',
+  ogImage: () => character.value?.image,
+  ogImageAlt: () => (character.value ? `${character.value.name} character` : ''),
+  robots: computed(() => (character.value ? 'index, follow' : 'noindex, follow')),
+})
 </script>
 
 <template>
