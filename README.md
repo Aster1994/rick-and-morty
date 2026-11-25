@@ -8,6 +8,17 @@ the [Rick and Morty API](https://rickandmortyapi.com/documentation).
 - Node.js `24.22.1`
 - Corepack-enabled pnpm `12.21.0`
 
+## Stack
+
+- Nuxt 4.6.4 / Vue 3
+- TypeScript (strict mode)
+- Tailwind CSS 4 through `@tailwindcss/vite`
+- `@nuxt/icon` (Lucide icon collection)
+- `@nuxt/image`
+- pnpm
+- ESLint + Prettier
+- Netlify (Nitro SSR) and Docker
+
 ## Getting started
 
 Make sure to install dependencies:
