@@ -5,7 +5,7 @@ the [Rick and Morty API](https://rickandmortyapi.com/documentation).
 
 ## Requirements
 
-- Node.js `24.22.1`
+- Node.js `24.22.3`
 - Corepack-enabled pnpm `12.21.0`
 
 ## Stack
