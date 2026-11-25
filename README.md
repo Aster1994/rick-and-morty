@@ -58,6 +58,7 @@ Open `http://localhost:3000`.
 ```env
 NUXT_PUBLIC_APP_ENV=production
 NUXT_PUBLIC_API_BASE_URL=https://rickandmortyapi.com/api
+
 ```
 
 No API key is required.
