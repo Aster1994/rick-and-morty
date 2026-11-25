@@ -62,3 +62,14 @@ NUXT_PUBLIC_API_BASE_URL=https://rickandmortyapi.com/api
 ```
 
 No API key is required.
+
+PS:
+
+```
+Background and foreground colors do not have a sufficient contrast ratio.
+```
+
+This is a Lighthouse report; the issue is caused by the colors defined within the project(#989a9c text color on
+#2b3538 ). A
+more visible color needs
+to be used against this background. Since I had to adhere to the UI design, I didn't change it.

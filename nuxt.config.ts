@@ -54,6 +54,7 @@ export default defineNuxtConfig({
   },
 
   site: {
+    defaultLocale: 'en',
     name: 'Rick & Morty Explorer',
   },
 
