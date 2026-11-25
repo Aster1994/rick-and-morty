@@ -61,9 +61,9 @@ export default defineNuxtPlugin(() => {
 
     pushToast({ title: 'Error', text: error.data?.error, type: 'error' })
 
-    if (error.statusCode === 401 && import.meta.client) {
-      navigateTo('/auth/login')
-    }
+    // if (error.statusCode === 401 && import.meta.client) {
+    //   navigateTo('/auth/login')
+    // }
   }
 
   return {

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     enabled: import.meta.dev,
   },
 
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/icon', '@nuxt/fonts'],
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/icon', '@nuxt/fonts', '@nuxtjs/seo'],
   css: ['~/assets/css/main.css'],
 
   typescript: {
@@ -54,6 +54,7 @@ export default defineNuxtConfig({
   },
 
   site: {
+    defaultLocale: 'en',
     name: 'Rick & Morty Explorer',
   },
 
