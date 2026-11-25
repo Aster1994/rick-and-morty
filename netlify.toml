@@ -1,0 +1,11 @@
+[build]
+  # Use the pnpm provided by Netlify's install step when available; otherwise
+  # (e.g. environments without Corepack-managed pnpm) install and build via npx.
+  command = "if command -v pnpm >/dev/null 2>&1; then pnpm build; else npx --yes pnpm@12.21.0 install --frozen-lockfile && npx --yes pnpm@12.21.0 build; fi"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24.22.3"
+
+[images]
+  remote_images = ["https://rickandmortyapi\\.com/.*"]

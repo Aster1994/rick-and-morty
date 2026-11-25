@@ -1,5 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+navigateTo('/characters')
+</script>
 
 <template>
-  <h1 class="w-full h-screen text-4xl font-bold mt-20 text-center">Home</h1>
+  <div
+    class="w-full h-screen mx-auto max-w-max-width-container flex items-center justify-center text-4xl font-black"
+  >
+    Home
+  </div>
 </template>
