@@ -1,41 +1,38 @@
-# Nuxt Minimal Starter
+# Rick & Morty
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A server-rendered character explorer built with Nuxt 4, TypeScript, Tailwind CSS 4, and
+the [Rick and Morty API](https://rickandmortyapi.com/documentation).
 
-## Setup
+## Requirements
+
+- Node.js `24.22.3`
+- Corepack-enabled pnpm `12.21.0`
+
+## Stack
+
+- Nuxt 4.6.4 / Vue 3
+- TypeScript (strict mode)
+- Tailwind CSS 4 through `@tailwindcss/vite`
+- `@nuxt/icon` (Lucide icon collection)
+- `@nuxt/image`
+- pnpm
+- ESLint + Prettier
+- Netlify (Nitro SSR) and Docker
+
+## Getting started
 
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+corepack enable
+corepack prepare pnpm@12.21.0 --activate
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Development
 
 ```bash
-# npm
-npm run dev
-
 # pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -43,33 +40,36 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
 # pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
-npm run preview
-
 # pnpm
 pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Open `http://localhost:3000`.
+
+## Environment variables
+
+```env
+NUXT_PUBLIC_APP_ENV=production
+NUXT_PUBLIC_API_BASE_URL=https://rickandmortyapi.com/api
+
+```
+
+No API key is required.
+
+PS:
+
+```
+Background and foreground colors do not have a sufficient contrast ratio.
+```
+
+This is a Lighthouse report; the issue is caused by the colors defined within the project(#989a9c text color on
+#2b3538 ). A
+more visible color needs
+to be used against this background. Since I had to adhere to the UI design, I didn't change it.
